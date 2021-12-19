@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+body
+{
+    padding: 0 auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop One', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.box
+{
+    width: 600px;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0px 0px 50px 5px rgb(0 0 0 / 10%);
+    padding-bottom: 20px;
+    transition: 0.5s ease-in-out all;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.box:hover
+{
+    box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 10%);
+    transition: 0.5s ease-in-out all;
 }
 
-.App-link {
-  color: #61dafb;
+h2
+{
+    color: gray;
+    font-weight: 100;
+    margin: 50px 0 50px;
+    font-family: Poppins;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h5
+{
+    font-family: Poppins;
+    margin-bottom: 3px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+button
+{
+    margin: 15px 0 20px;
+    background: #ffffff;
+    color: black;
+    border: none;
+    width: 120px;
+    height: 45px;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px 5px rgb(0 0 0 / 10%);
+    font-family: 'Mochiy Pop One', sans-serif;
+    cursor: pointer;
+}
+
+button:hover
+{
+    color: gray;
+}
+
+.box1, .box2
+{
+    width: 200px;
+    height: 130px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 5px rgb(0 0 0 / 20%);
+}
+
+@media (max-width: 767px)
+{
+    .box
+    {
+        width: 320px;
+    }
 }
