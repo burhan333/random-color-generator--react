@@ -2,9 +2,9 @@ import React, {useEffect, useState} from "react"
 
 const ColorGenerator = () => {
 
-    const [rgb1, setRgb1] = useState('rgba(0, 224, 255, 1)')
-    const [rgb2, setRgb2] = useState('rgba(0, 224, 255, 1)')
-    const [rgb3, setRgb3] = useState('rgba(0, 224, 255, 1)')
+    const [rgb1, setRgb1] = useState('')
+    const [rgb2, setRgb2] = useState('')
+    const [rgb3, setRgb3] = useState('')
 
     useEffect(() => {
         getRandomcolor1()
@@ -12,32 +12,30 @@ const ColorGenerator = () => {
         getRandomcolor3()
     }, [])
 
-    const getRandomNumber = (min, max) => {
-        const d = max - min + 1;
-        const r = Math.random() * d;
-        return Math.floor(r) + min;
+    const getRandomNumber = () => {
+        return Math.floor(Math.random() * 256) + 1
     }
 
     const getRandomcolor1 = () => {
-        const r = getRandomNumber(0, 255)
-        const g = getRandomNumber(0, 255)
-        const b = getRandomNumber(0, 255)
+        const r = getRandomNumber()
+        const g = getRandomNumber()
+        const b = getRandomNumber()
         const rgba = `rgba(${r},${g},${b}, 1)`
         setRgb1(rgba)
     }
 
     const getRandomcolor2 = () => {
-        const r = getRandomNumber(0, 255)
-        const g = getRandomNumber(0, 255)
-        const b = getRandomNumber(0, 255)
+        const r = getRandomNumber()
+        const g = getRandomNumber()
+        const b = getRandomNumber()
         const rgba = `rgba(${r},${g},${b}, 1)`
         setRgb2(rgba)
     }
 
     const getRandomcolor3 = () => {
-        const r = getRandomNumber(0, 255)
-        const g = getRandomNumber(0, 255)
-        const b = getRandomNumber(0, 255)
+        const r = getRandomNumber()
+        const g = getRandomNumber()
+        const b = getRandomNumber()
         const rgba = `rgba(${r},${g},${b}, 1)`
         setRgb3(rgba)
     }
